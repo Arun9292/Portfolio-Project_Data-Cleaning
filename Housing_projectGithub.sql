@@ -1,36 +1,4 @@
 
-show variables like 'local_infile'
-
-set global local_infile = 1
-
-create table Housing_Data
-(
-UniqueID int NOT NULL,
-ParcelID text,
-LandUse text,
-PropertyAddress text,
-SaleDate text,
-SalePrice int,
-LegalReference text,
-SoldAsVacant text,
-OwnerName text,
-OwnerAddress text,
-Acreage double,
-TaxDistrict text,
-LandValue int,
-BuildingValue int,
-TotalValue int,
-YearBuilt int,
-Bedrooms int,
-FullBath int,
-HalfBath int
-)
-
-load data local infile 'C:\\Users\\Arun\\Desktop\\Housing_Data.csv'
-into table `housing_data`
-fields terminated by ',' enclosed by '"'
-lines terminated by  '\r\n'
-ignore 1 rows
 
 SELECT *
 FROM `housing_data`
